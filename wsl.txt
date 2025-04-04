@@ -33,14 +33,14 @@ ADD AT END , Ctrl O, Ctrl X
 ubuntu    ALL=(ALL:ALL) ALL
 
 
+echo 'cd ~' >> ~/.bashrc
 exit
-nano ~/.bashrc
-
-ADD AT END , Ctrl O, Ctrl X
-cd ~
+echo 'cd ~' >> ~/.bashrc
 
 
+Reload shell
 source ~/.bashrc
+
 Install Docker Engine on Ubuntu
 https://docs.docker.com/engine/install/ubuntu/
 *********** DO NOT USE THESE COMMANDS
@@ -186,9 +186,6 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(pyenv init - bash)"' >> ~/.bash_profile
 
-
-Reload shell
-source ~/.bashrc
 
 Restart your shell for the PATH changes to take effect.
 exec "$SHELL"
