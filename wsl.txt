@@ -93,6 +93,9 @@ docker start open-webui
 docker exec -it ollama ollama list
 docker exec -it ollama ollama
 
+RAM CPU USAGE
+docker stats
+
 docker restart $(docker ps -aq)
 
 CHECK AUTOSTART
